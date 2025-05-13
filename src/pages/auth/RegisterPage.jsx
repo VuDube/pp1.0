@@ -127,13 +127,13 @@ const RegisterPage = () => {
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
-          <Button type="submit" className="w-full text-lg py-6 bg-payper-green-default hover:bg-payper-green-dark" disabled={loading}>
+          <Button type="submit" className="w-full text-lg py-6 bg-payper-green-default " disabled={loading}>
             <UserPlus className="mr-2 h-5 w-5" /> {loading ? t('registering') : t('registerButton')}
           </Button>
         </form>
         <p className="mt-8 text-center text-sm text-muted-foreground">
           {t('alreadyHaveAccount')}{' '}
-          <Link to="/login" className="font-semibold text-primary hover:underline">
+          <Link to="/login" className="font-semibold text-primary ">
             {t('loginLink')}
           </Link>
         </p>

@@ -332,7 +332,7 @@ const MerchantPaymentPage = () => {
 
         <Button 
           type="submit" 
-          className="w-full bg-payper-green-default hover:bg-payper-green-dark text-lg p-6 h-16 rounded-lg flex items-center justify-center"
+          className="w-full bg-payper-green-default  text-lg p-6 h-16 rounded-lg flex items-center justify-center"
           disabled={!stripe || isLoading}
         >
           {isLoading ? (
@@ -369,7 +369,7 @@ const MerchantPaymentPage = () => {
             <AlertDialogAction
               onClick={handleRetry}
               disabled={isLoading || retryCount >= 3}
-              className="bg-payper-blue-default hover:bg-payper-blue-dark"
+              className="bg-payper-blue-default "
             >
               {t('merchantPayment.retryPayment')}
             </AlertDialogAction>

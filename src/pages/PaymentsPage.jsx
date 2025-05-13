@@ -55,14 +55,14 @@ const PaymentsPage = () => {
           icon={<Send />} 
           label={t('sendMoney')} 
           variant="default"
-          className="bg-payper-blue-default hover:bg-payper-blue-dark text-white"
+          className="bg-payper-blue-default  text-white"
           onClick={() => navigate('/payments/send')}
         />
         <ActionButton 
           icon={<ShoppingCart />} 
           label={t('payMerchant')} 
           variant="secondary"
-          className="bg-payper-green-default hover:bg-payper-green-dark text-white"
+          className="bg-payper-green-default  text-white"
           onClick={() => navigate('/payments/merchant')}
         />
       </motion.section>
@@ -77,7 +77,7 @@ const PaymentsPage = () => {
           <h2 className="text-xl font-semibold text-foreground">{t('recentTransactions')}</h2>
           <Button 
             variant="link" 
-            className="text-primary hover:text-primary/80 font-medium"
+            className="text-primary  font-medium"
             onClick={() => navigate('/transactions')}
           >
             {t('viewAll')}
@@ -89,7 +89,7 @@ const PaymentsPage = () => {
           {recentTransactionsData.map((item, index) => (
             <motion.li 
               key={index} 
-              className="flex justify-between items-center p-4 bg-background rounded-lg shadow-sm hover:shadow-md transition-shadow"
+              className="flex justify-between items-center p-4 bg-background rounded-lg shadow-sm  transition-shadow"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
@@ -125,7 +125,7 @@ const PaymentsPage = () => {
         <p className="text-sm text-muted-foreground mb-4">{t('noScheduledPayments')}</p>
         <Button 
           size="lg"
-          className="w-full bg-payper-blue-default hover:bg-payper-blue-dark text-white"
+          className="w-full bg-payper-blue-default  text-white"
         >
           <PlusCircle className="mr-2 h-5 w-5" /> 
           {t('scheduleNewPayment')}

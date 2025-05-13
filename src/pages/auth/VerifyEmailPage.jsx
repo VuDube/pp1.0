@@ -29,13 +29,13 @@ const VerifyEmailPage = () => {
           {t('verifyEmailSpam')}
         </p>
         <Link to="/login">
-          <Button className="w-full text-lg py-6 bg-payper-blue-default hover:bg-payper-blue-dark">
+          <Button className="w-full text-lg py-6 bg-payper-blue-default ">
             {t('backToLogin')}
           </Button>
         </Link>
          <p className="mt-6 text-xs text-muted-foreground">
           {t('didNotReceiveEmail')}{' '}
-          <button onClick={() => alert(t('resendNotImplemented'))} className="font-semibold text-primary hover:underline">
+          <button onClick={() => alert(t('resendNotImplemented'))} className="font-semibold text-primary ">
             {t('resendVerificationLink')}
           </button>
         </p>

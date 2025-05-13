@@ -88,7 +88,7 @@ const FinancialTipsPage = () => {
           {t('personalizedAdviceDesc')}
         </p>
         <div className="text-center">
-          <button className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-2 rounded-lg font-medium">
+          <button className="bg-primary text-primary-foreground  px-6 py-2 rounded-lg font-medium">
             {t('findAdvisor')}
           </button>
         </div>

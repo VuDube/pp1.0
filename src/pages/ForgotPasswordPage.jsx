@@ -96,7 +96,7 @@ const ForgotPasswordPage = () => {
                 placeholder="you@example.com"
               />
             </div>
-            <Button type="submit" className="w-full bg-payper-green-default hover:bg-payper-green-dark text-lg py-3" disabled={loading}>
+            <Button type="submit" className="w-full bg-payper-green-default  text-lg py-3" disabled={loading}>
               {loading ? t('auth.loading') : t('auth.sendResetLink')}
             </Button>
           </form>
@@ -104,7 +104,7 @@ const ForgotPasswordPage = () => {
 
         <p className="mt-8 text-center text-sm text-muted-foreground">
           {t('auth.rememberPassword')}{' '}
-          <Link to="/login" className="font-semibold text-primary hover:underline">
+          <Link to="/login" className="font-semibold text-primary ">
             {t('auth.loginNow')}
           </Link>
         </p>

@@ -156,7 +156,7 @@ const UpdatePasswordPage = () => {
               </Button>
             </div>
           </div>
-          <Button type="submit" className="w-full bg-payper-green-default hover:bg-payper-green-dark text-lg py-3" disabled={loading}>
+          <Button type="submit" className="w-full bg-payper-green-default  text-lg py-3" disabled={loading}>
             {loading ? t('auth.loading') : t('auth.updatePasswordButton')}
           </Button>
         </form>

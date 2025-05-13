@@ -222,7 +222,7 @@ const TransactionHistoryPage = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
-                className="bg-card rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow"
+                className="bg-card rounded-lg p-4 shadow-sm  transition-shadow"
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-4">

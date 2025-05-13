@@ -71,12 +71,12 @@ const ForgotPasswordPage = () => {
               />
             </div>
           </div>
-          <Button type="submit" className="w-full text-lg py-6 bg-payper-blue-default hover:bg-payper-blue-dark" disabled={loading}>
+          <Button type="submit" className="w-full text-lg py-6 bg-payper-blue-default " disabled={loading}>
             {loading ? t('sendingResetLink') : t('sendResetLinkButton')}
           </Button>
         </form>
         <p className="mt-8 text-center text-sm">
-          <Link to="/login" className="font-semibold text-primary hover:underline flex items-center justify-center">
+          <Link to="/login" className="font-semibold text-primary  flex items-center justify-center">
             <ArrowLeft className="mr-2 h-4 w-4" /> {t('backToLogin')}
           </Link>
         </p>

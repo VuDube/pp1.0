@@ -75,14 +75,14 @@ const PaymentSuccessPage = () => {
       <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md">
         <Button 
           onClick={() => navigate('/')} 
-          className="w-full bg-payper-blue-default hover:bg-payper-blue-dark text-lg p-6 h-14 rounded-lg"
+          className="w-full bg-payper-blue-default  text-lg p-6 h-14 rounded-lg"
         >
           <Home className="mr-2 h-5 w-5" /> {t('paymentSuccess.backToHome')}
         </Button>
         <Button 
           onClick={() => navigate('/receipts')} 
           variant="outline" 
-          className="w-full text-lg p-6 h-14 rounded-lg border-primary text-primary hover:bg-primary/10"
+          className="w-full text-lg p-6 h-14 rounded-lg border-primary text-primary "
         >
           <FileText className="mr-2 h-5 w-5" /> {t('paymentSuccess.viewReceipts')}
         </Button>

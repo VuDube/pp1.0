@@ -43,7 +43,7 @@ const OnboardingPage = ({ onLanguageSelected }) => {
               <Button
                 onClick={() => selectLanguage(lang.code)}
                 variant="outline"
-                className="w-full text-left py-6 text-lg border-2 hover:border-primary hover:bg-primary/10 transition-all duration-200"
+                className="w-full text-left py-6 text-lg border-2   transition-all duration-200"
               >
                 <span className="mr-3 text-2xl">{lang.flag}</span>
                 {lang.name}

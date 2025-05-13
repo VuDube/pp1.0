@@ -86,17 +86,17 @@ const LoginPage = () => {
             </div>
           </div>
           <div className="text-right">
-            <Link to="/forgot-password" className="text-sm text-primary hover:underline">
+            <Link to="/forgot-password" className="text-sm text-primary ">
               {t('forgotPasswordLink')}
             </Link>
           </div>
-          <Button type="submit" className="w-full text-lg py-6 bg-payper-blue-default hover:bg-payper-blue-dark" disabled={loading}>
+          <Button type="submit" className="w-full text-lg py-6 bg-payper-blue-default " disabled={loading}>
             {loading ? t('loggingIn') : t('loginButton')}
           </Button>
         </form>
         <p className="mt-8 text-center text-sm text-muted-foreground">
           {t('dontHaveAccount')}{' '}
-          <Link to="/register" className="font-semibold text-primary hover:underline">
+          <Link to="/register" className="font-semibold text-primary ">
             {t('registerLink')}
           </Link>
         </p>

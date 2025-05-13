@@ -65,7 +65,7 @@ const UpdatePasswordPage = () => {
           <CheckCircle className="h-16 w-16 text-payper-green-default mx-auto mb-6" />
           <h2 className="text-2xl font-bold text-primary mb-4">{t('passwordUpdatedTitle')}</h2>
           <p className="text-muted-foreground mb-6">{message}</p>
-          <Button onClick={() => navigate('/')} className="w-full bg-payper-green-default hover:bg-payper-green-dark">{t('goToDashboard')}</Button>
+          <Button onClick={() => navigate('/')} className="w-full bg-payper-green-default ">{t('goToDashboard')}</Button>
         </motion.div>
       </div>
     );
@@ -117,7 +117,7 @@ const UpdatePasswordPage = () => {
               />
             </div>
           </div>
-          <Button type="submit" className="w-full text-lg py-6 bg-payper-blue-default hover:bg-payper-blue-dark" disabled={loading}>
+          <Button type="submit" className="w-full text-lg py-6 bg-payper-blue-default " disabled={loading}>
             {loading ? t('updatingPassword') : t('updatePasswordButton')}
           </Button>
         </form>

@@ -179,7 +179,7 @@ const SendMoneyPage = () => {
 
         <Button 
           type="submit" 
-          className="w-full bg-payper-blue-default hover:bg-payper-blue-dark text-lg p-6 h-16 rounded-lg flex items-center justify-center"
+          className="w-full bg-payper-blue-default  text-lg p-6 h-16 rounded-lg flex items-center justify-center"
           disabled={isLoading}
         >
           {isLoading ? t('auth.loading') : t('p2p.proceedToConfirmation')} <Send className="ml-2 h-5 w-5" />
@@ -208,7 +208,7 @@ const SendMoneyPage = () => {
             <Button 
               type="button" 
               onClick={handleSendMoney} 
-              className="w-full sm:w-auto bg-payper-green-default hover:bg-payper-green-dark text-lg p-3 h-12 rounded-md"
+              className="w-full sm:w-auto bg-payper-green-default  text-lg p-3 h-12 rounded-md"
               disabled={isLoading}
             >
               {isLoading ? t('auth.loading') : t('p2p.confirmAndSend')}

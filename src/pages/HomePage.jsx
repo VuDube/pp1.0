@@ -49,7 +49,7 @@ const QuickActionCard = ({ title, icon, linkTo, color }) => {
 
 const TransactionItem = ({ description, amount, date, type, t }) => (
   <motion.li 
-    className="flex justify-between items-center p-3 bg-card rounded-lg shadow-sm hover:shadow-md transition-shadow"
+    className="flex justify-between items-center p-3 bg-card rounded-lg shadow-sm  transition-shadow"
     initial={{ opacity: 0, x: -20 }}
     animate={{ opacity: 1, x: 0 }}
     transition={{ duration: 0.3 }}
@@ -180,10 +180,10 @@ const HomePage = () => {
       >
         <h2 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-primary">{t('quickActions')}</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
-          <QuickActionCard title={t('makePayment')} icon={<Send />} linkTo="/payments" color="bg-primary hover:bg-primary/90" />
-          <QuickActionCard title={t('createInvoice')} icon={<PlusCircle />} linkTo="/invoices" color="bg-secondary hover:bg-secondary/90" />
-          <QuickActionCard title={t('viewReceipts')} icon={<FileText />} linkTo="/receipts" color="bg-primary hover:bg-primary/90" />
-          <QuickActionCard title={t('viewProfile')} icon={<User />} linkTo="/profile" color="bg-secondary hover:bg-secondary/90" />
+          <QuickActionCard title={t('makePayment')} icon={<Send />} linkTo="/payments" color="bg-primary " />
+          <QuickActionCard title={t('createInvoice')} icon={<PlusCircle />} linkTo="/invoices" color="bg-secondary " />
+          <QuickActionCard title={t('viewReceipts')} icon={<FileText />} linkTo="/receipts" color="bg-primary " />
+          <QuickActionCard title={t('viewProfile')} icon={<User />} linkTo="/profile" color="bg-secondary " />
         </div>
       </motion.section>
 

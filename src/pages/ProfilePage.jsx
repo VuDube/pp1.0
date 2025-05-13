@@ -23,7 +23,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 
 const ProfileOption = ({ icon, label, onClick, isDestructive = false }) => (
   <motion.button
-    className={`flex items-center w-full p-4 bg-card ${isDestructive ? 'hover:bg-destructive/10 text-destructive' : 'hover:bg-accent'} rounded-lg shadow transition-colors duration-150`}
+    className={`flex items-center w-full p-4 bg-card ${isDestructive ? ' text-destructive' : ''} rounded-lg shadow transition-colors duration-150`}
     onClick={onClick}
     whileHover={{ x: 5 }}
     initial={{ opacity: 0, x: -20 }}
@@ -136,7 +136,7 @@ const ProfilePage = () => {
           <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center text-4xl font-bold text-primary shadow-lg">
             {avatarText}
           </div>
-          <Button variant="outline" size="icon" className="absolute bottom-0 right-0 bg-background rounded-full p-2 shadow-md border-primary hover:bg-primary/10">
+          <Button variant="outline" size="icon" className="absolute bottom-0 right-0 bg-background rounded-full p-2 shadow-md border-primary ">
             <Edit3 className="h-4 w-4 text-primary" />
           </Button>
         </div>
@@ -171,7 +171,7 @@ const ProfilePage = () => {
         </p>
         <p className="text-center text-xs text-muted-foreground mb-4">{t('planDescription')}</p>
         <div className="text-center">
-          <Button variant="secondary" className="bg-payper-green-default hover:bg-payper-green-dark">
+          <Button variant="secondary" className="bg-payper-green-default ">
             {t('upgradePlan')}
           </Button>
         </div>
@@ -196,7 +196,7 @@ const ProfilePage = () => {
           </div>
           <DialogFooter>
             <Button variant="outline" onClick={() => setIsPasswordDialogOpen(false)}>{t('cancel')}</Button>
-            <Button type="submit" onClick={handleChangePassword} disabled={loading} className="bg-payper-green-default hover:bg-payper-green-dark">{loading ? t('auth.loading') : t('auth.updatePasswordButton')}</Button>
+            <Button type="submit" onClick={handleChangePassword} disabled={loading} className="bg-payper-green-default ">{loading ? t('auth.loading') : t('auth.updatePasswordButton')}</Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>
@@ -227,7 +227,7 @@ const ProfilePage = () => {
           </div>
           <DialogFooter>
             <Button variant="outline" onClick={() => setIsLanguageDialogOpen(false)}>{t('cancel')}</Button>
-            <Button type="submit" onClick={handleChangeLanguage} disabled={loading} className="bg-payper-green-default hover:bg-payper-green-dark">{loading ? t('auth.loading') : t('saveChanges')}</Button>
+            <Button type="submit" onClick={handleChangeLanguage} disabled={loading} className="bg-payper-green-default ">{loading ? t('auth.loading') : t('saveChanges')}</Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>

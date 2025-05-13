@@ -263,7 +263,7 @@ const ReceiptsPage = () => {
       >
         <Button 
           onClick={() => setShowUploadDialog(true)}
-          className="w-full sm:w-auto flex-1 bg-payper-blue-default hover:bg-payper-blue-dark text-lg py-6"
+          className="w-full sm:w-auto flex-1 bg-payper-blue-default  text-lg py-6"
           disabled={loading}
         >
           <UploadCloud className="mr-2 h-6 w-6" /> {t('uploadReceipt')}
@@ -410,7 +410,7 @@ const ReceiptsPage = () => {
             <Button
               onClick={handleUpload}
               disabled={loading}
-              className="bg-payper-green-default hover:bg-payper-green-dark"
+              className="bg-payper-green-default "
             >
               {loading ? t('documents.uploading') : t('documents.upload')}
             </Button>
@@ -431,7 +431,7 @@ const ReceiptsPage = () => {
             <AlertDialogAction
               onClick={handleDelete}
               disabled={loading}
-              className="bg-destructive hover:bg-destructive/90"
+              className="bg-destructive "
             >
               {loading ? t('documents.deleting') : t('documents.delete')}
             </AlertDialogAction>

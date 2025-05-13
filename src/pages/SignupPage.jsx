@@ -63,7 +63,7 @@ const SignupPage = () => {
         <div className="bg-background p-8 sm:p-12 rounded-2xl shadow-2xl w-full max-w-md">
           <h1 className="text-2xl font-bold text-primary mb-4">{t('auth.checkYourEmail')}</h1>
           <p className="text-muted-foreground mb-6">{t('auth.verificationEmailSent')}</p>
-          <Button onClick={() => navigate('/login')} className="w-full bg-payper-green-default hover:bg-payper-green-dark">
+          <Button onClick={() => navigate('/login')} className="w-full bg-payper-green-default ">
             {t('auth.backToLogin')}
           </Button>
         </div>

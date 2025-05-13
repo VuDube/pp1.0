@@ -1,4 +1,3 @@
-
 import { cn } from '@/lib/utils';
 import { Slot } from '@radix-ui/react-slot';
 import { cva } from 'class-variance-authority';
@@ -9,13 +8,13 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: 'bg-payper-blue-default text-white hover:bg-payper-blue-dark active:scale-[0.98] shadow-lg hover:shadow-xl',
-        destructive: 'bg-destructive text-destructive-foreground hover:bg-destructive/90 active:scale-[0.98] shadow-lg hover:shadow-xl',
-        outline: 'border-2 border-input bg-background hover:bg-accent hover:text-accent-foreground active:scale-[0.98]',
-        secondary: 'bg-payper-green-default text-white hover:bg-payper-green-dark active:scale-[0.98] shadow-lg hover:shadow-xl',
-        ghost: 'hover:bg-accent hover:text-accent-foreground active:scale-[0.98]',
-        link: 'text-primary underline-offset-4 hover:underline',
-        gradient: 'payper-gradient-bg text-white hover:opacity-90 active:scale-[0.98] shadow-lg hover:shadow-xl',
+        default: 'bg-[#0074c2] text-white active:scale-[0.98] shadow-lg',
+        destructive: 'bg-[#ff4d4f] text-white active:scale-[0.98] shadow-lg',
+        outline: 'border-2 border-[#0074c2] text-[#0074c2] bg-white active:scale-[0.98]',
+        secondary: 'bg-[#39b54a] text-white active:scale-[0.98] shadow-lg',
+        ghost: 'bg-transparent text-[#0074c2] active:scale-[0.98]',
+        link: 'text-[#0074c2] underline-offset-4',
+        gradient: 'bg-gradient-to-r from-[#0074c2] to-[#39b54a] text-white active:scale-[0.98] shadow-lg',
       },
       size: {
         default: 'h-10 px-4 py-2',

@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 
 const InvoiceItem = ({ client, amount, status, dueDate, id, t }) => (
   <motion.div 
-    className="bg-card p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow"
+    className="bg-card p-4 rounded-lg shadow-md  transition-shadow"
     whileHover={{ y: -5 }}
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
@@ -33,7 +33,7 @@ const InvoiceItem = ({ client, amount, status, dueDate, id, t }) => (
     <div className="flex space-x-2">
       <Button variant="outline" size="sm" className="text-xs"><Eye className="mr-1 h-3 w-3" /> {t('view')}</Button>
       <Button variant="outline" size="sm" className="text-xs"><Download className="mr-1 h-3 w-3" /> {t('download')}</Button>
-      {status !== 'Paid' && <Button variant="ghost" size="sm" className="text-xs text-payper-green-default hover:bg-payper-green-default/10"><Send className="mr-1 h-3 w-3" /> {t('sendReminder')}</Button>}
+      {status !== 'Paid' && <Button variant="ghost" size="sm" className="text-xs text-payper-green-default "><Send className="mr-1 h-3 w-3" /> {t('sendReminder')}</Button>}
     </div>
   </motion.div>
 );
@@ -63,7 +63,7 @@ const InvoicesPage = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.5 }}
       >
-        <Button size="lg" className="bg-payper-green-default hover:bg-payper-green-dark text-lg py-4 px-8 rounded-full shadow-lg">
+        <Button size="lg" className="bg-payper-green-default  text-lg py-4 px-8 rounded-full shadow-lg">
           <PlusCircle className="mr-2 h-6 w-6" /> {t('createNewInvoice')}
         </Button>
       </motion.div>
