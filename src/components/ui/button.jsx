@@ -45,22 +45,21 @@ const Button = React.forwardRef(({
   
   return (
     <Comp
-      className={cn(
-        buttonVariants({ variant, size, className }),
-        loading && 'relative text-transparent hover:text-transparent cursor-wait'
-      )}
-      disabled={loading || props.disabled}
-      ref={ref}
-      {...props}
-    >
-      {children}
-      {loading && (
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
-        </div>
-      )}
-      <span className="absolute inset-0 bg-white/10 opacity-0 hover:opacity-100 transition-opacity duration-200" />
-    </Comp>
+  className={cn(
+    buttonVariants({ variant, size, className }),
+    loading && 'relative text-transparent cursor-wait' // Ensure 'loading' doesn't hide text
+  )}
+  disabled={loading || props.disabled}
+  ref={ref}
+  {...props}
+>
+  {children} {/* Show children directly without hiding */}
+  {loading && (
+    <div className="absolute inset-0 flex items-center justify-center">
+      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+    </div>
+  )}
+</Comp>
   );
 });
 
