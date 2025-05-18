@@ -4,17 +4,17 @@ import { cva } from 'class-variance-authority';
 import React from 'react';
 
 const buttonVariants = cva(
-  'inline-flex items-center justify-center gap-2 rounded-lg text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 relative overflow-hidden',
+  'inline-flex items-center justify-center gap-2 rounded-lg text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none relative',
   {
     variants: {
       variant: {
-        default: 'bg-[#0074c2] text-white active:scale-[0.98] shadow-lg',
-        destructive: 'bg-[#ff4d4f] text-white active:scale-[0.98] shadow-lg',
-        outline: 'border-2 border-[#0074c2] text-[#0074c2] bg-white active:scale-[0.98]',
-        secondary: 'bg-[#39b54a] text-white active:scale-[0.98] shadow-lg',
-        ghost: 'bg-transparent text-[#0074c2] active:scale-[0.98]',
-        link: 'text-[#0074c2] underline-offset-4',
-        gradient: 'bg-gradient-to-r from-[#0074c2] to-[#39b54a] text-white active:scale-[0.98] shadow-lg',
+        default: 'bg-[#0074c2] text-white shadow-lg', // removed active:scale and hover/focus/active classes
+        destructive: 'bg-[#ff4d4f] text-white shadow-lg',
+        outline: 'border-2 border-[#0074c2] text-[#0074c2] bg-white',
+        secondary: 'bg-[#39b54a] text-white shadow-lg',
+        ghost: 'bg-[#e6f7ff] text-[#0074c2]', // use a light bg instead of transparent for permanent visibility
+        link: 'text-[#0074c2] underline underline-offset-4',
+        gradient: 'bg-gradient-to-r from-[#0074c2] to-[#39b54a] text-white shadow-lg',
       },
       size: {
         default: 'h-10 px-4 py-2',
