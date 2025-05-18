@@ -97,12 +97,6 @@
     @apply relative overflow-hidden transition-all duration-200;
   }
 
-  /* Button hover effect */
-  button:not(:disabled):hover::after {
-    content: '';
-    @apply absolute inset-0 bg-white/10 transition-opacity duration-200;
-  }
-
   /* Button active state */
   button:not(:disabled):active {
     @apply transform scale-[0.98] transition-transform duration-75;
