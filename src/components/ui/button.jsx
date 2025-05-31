@@ -4,17 +4,17 @@ import { cva } from 'class-variance-authority';
 import React from 'react';
 
 const buttonVariants = cva(
-  'inline-flex items-center justify-center gap-2 rounded-lg text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none relative',
+  'inline-flex items-center justify-center gap-2 rounded-lg text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 relative overflow-hidden',
   {
     variants: {
       variant: {
-        default: 'bg-[#0074c2] text-white shadow-lg', // removed active:scale and hover/focus/active classes
-        destructive: 'bg-[#ff4d4f] text-white shadow-lg',
-        outline: 'border-2 border-[#0074c2] text-[#0074c2] bg-white',
-        secondary: 'bg-[#39b54a] text-white shadow-lg',
-        ghost: 'bg-[#e6f7ff] text-[#0074c2]', // use a light bg instead of transparent for permanent visibility
-        link: 'text-[#0074c2] underline underline-offset-4',
-        gradient: 'bg-gradient-to-r from-[#0074c2] to-[#39b54a] text-white shadow-lg',
+        default: 'bg-payper-blue-default text-white active:scale-[0.98] shadow-lg shadow-xl',
+        destructive: 'bg-destructive text-destructive-foreground active:scale-[0.98] shadow-lg shadow-xl',
+        outline: 'border-2 border-input bg-background active:scale-[0.98]',
+        secondary: 'bg-payper-green-default text-white active:scale-[0.98] shadow-lg shadow-xl',
+        ghost: 'active:scale-[0.98]',
+        link: 'text-primary underline-offset-4 underline',
+        gradient: 'payper-gradient-bg text-white active:scale-[0.98] shadow-lg shadow-xl',
       },
       size: {
         default: 'h-10 px-4 py-2',
@@ -32,34 +32,35 @@ const buttonVariants = cva(
   },
 );
 
-const Button = React.forwardRef(({ 
-  className, 
-  variant, 
-  size, 
+const Button = React.forwardRef(({
+  className,
+  variant,
+  size,
   asChild = false,
   loading = false,
   children,
-  ...props 
+  ...props
 }, ref) => {
   const Comp = asChild ? Slot : 'button';
-  
+
   return (
     <Comp
-  className={cn(
-    buttonVariants({ variant, size, className }),
-    loading && 'relative text-transparent cursor-wait' // Ensure 'loading' doesn't hide text
-  )}
-  disabled={loading || props.disabled}
-  ref={ref}
-  {...props}
->
-  {children} {/* Show children directly without hiding */}
-  {loading && (
-    <div className="absolute inset-0 flex items-center justify-center">
-      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
-    </div>
-  )}
-</Comp>
+      className={cn(
+        buttonVariants({ variant, size, className }),
+        loading && 'relative text-transparent cursor-wait'
+      )}
+      disabled={loading || props.disabled}
+      ref={ref}
+      {...props}
+    >
+      {children}
+      {loading && (
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+        </div>
+      )}
+      <span className="absolute inset-0 bg-white/10 opacity-0 transition-opacity duration-200" />
+    </Comp>
   );
 });
 
