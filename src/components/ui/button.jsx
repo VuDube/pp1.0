@@ -59,7 +59,6 @@ const Button = React.forwardRef(({
           <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
         </div>
       )}
-      <span className="absolute inset-0 bg-white/10 opacity-0 transition-opacity duration-200" />
     </Comp>
   );
 });
