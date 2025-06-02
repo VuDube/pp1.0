@@ -143,7 +143,8 @@
 /* Enhanced focus styles for better accessibility */
 .focus-ring {
   @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background;
-/* Always show text and background for major button variants */
+}
+  /* Always show text and background for major button variants */
 .bg-payper-blue-default {
   background-color: #0074c2 !important;
   color: #fff !important;
