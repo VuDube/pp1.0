@@ -143,4 +143,30 @@
 /* Enhanced focus styles for better accessibility */
 .focus-ring {
   @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+/* Always show text and background for major button variants */
+.bg-payper-blue-default {
+  background-color: #0074c2 !important;
+  color: #fff !important;
+  opacity: 1 !important;
+}
+
+.bg-payper-green-default {
+  background-color: #39b54a !important;
+  color: #fff !important;
+  opacity: 1 !important;
+}
+
+/* If using gradient variant */
+.payper-gradient-bg {
+  background: linear-gradient(135deg, #0074c2 0%, #39b54a 100%) !important;
+  color: #fff !important;
+  opacity: 1 !important;
+}
+
+/* Enforce text always visible for button */
+button, .button, .btn {
+  color: #fff !important;
+  opacity: 1 !important;
+  background-blend-mode: normal !important;
+  filter: none !important;
 }
